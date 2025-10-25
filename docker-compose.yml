@@ -1,0 +1,35 @@
+services:
+  # ------------------------------------------------------------------
+  # MASTER SERVICE (The UI and coordinator)
+  # ------------------------------------------------------------------
+  master:
+    image: locustio/locust:latest
+    ports:
+      # Exposes the Web UI port to your host machine
+      - "8089:8089"
+    volumes:
+      # Mounts your local locustfile.py into the container
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --master
+    networks:
+      - locust-network
+
+  # ------------------------------------------------------------------
+  # WORKER SERVICE (The load generators)
+  # ------------------------------------------------------------------
+  worker:
+    image: locustio/locust:latest
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --worker --master-host master
+    networks:
+      - locust-network
+    # NOTE: Use the `docker compose up --scale worker=7` command 
+    #       to set the exact number of workers (7) that matches our CPU cores.
+
+# --------------------------------------------------------------------
+# NETWORKING
+# --------------------------------------------------------------------
+networks:
+  locust-network:
+    driver: bridge
