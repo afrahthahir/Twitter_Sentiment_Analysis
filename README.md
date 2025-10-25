@@ -38,8 +38,8 @@ The model was containerized and deployed as a **FastAPI** service, chosen for it
 
 The API was subjected to a stress test using **Locust** to validate the requirement for handling at least 500 concurrent users. The deployment utilized the asynchronous nature of Uvicorn workers to prevent request blocking.
 
-(image1.png)
-(image2.png)
+![Locust Load Test Results showing the RPS and API Failure counts](image1.png)
+![Locust Load Test Results showing 500 concurrent users](image2.png)
 
 | Metric | Result |
 | :--- | :--- |
