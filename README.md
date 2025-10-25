@@ -1,10 +1,10 @@
-# 🤖 AI/ML Technical Assessment Report
+# 🤖 Twitter Sentiment Analysis
 
 This repository contains the solution for the two-part technical exercise:
 1.  **Deep Learning:** Fine-tuning and deploying a sentiment analysis model optimized for high concurrency.
 ---
 
-## 1. Technical Exercise 1: High-Concurrency Sentiment Analysis API
+## 1. : High-Concurrency Sentiment Analysis API
 
 ### 1.1 Model Development and Iterations
 
