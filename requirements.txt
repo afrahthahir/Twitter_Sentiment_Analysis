@@ -1,0 +1,31 @@
+# Core Machine Learning Frameworks
+tensorflow==2.15.0 
+keras==2.15.0 
+numpy==1.26.3 
+
+# Hugging Face and NLP Dependencies
+transformers==4.35.2 
+huggingface-hub==0.20.3 
+tokenizers==0.15.1 
+
+# API and Server Dependencies
+fastapi==0.118.0 
+pydantic==1.10.14 
+gunicorn==23.0.0 
+uvicorn==0.37.0 
+starlette==0.48.0  # FastAPI/Uvicorn core
+
+# Essential Dependencies (for TensorFlow and Python environment)
+absl-py==2.1.0 
+flatbuffers==23.5.26 
+gast==0.5.4 
+grpcio==1.60.0 
+h5py==3.10.0 
+opt-einsum==3.3.0 
+protobuf==4.23.4 
+six==1.16.0 
+tensorboard==2.15.1 
+tensorboard-data-server==0.7.2 
+termcolor==2.4.0 
+typing_extensions==4.15.0 
+wrapt==1.14.1 
